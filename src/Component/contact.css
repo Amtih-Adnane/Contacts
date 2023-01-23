@@ -1,0 +1,24 @@
+
+form .content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+form input{
+    width: 30rem;
+    margin:.5rem auto;
+    padding: .5rem;
+}
+form button{
+    cursor: pointer;
+    width: 15rem;
+    margin: 1rem auto;
+    padding: .5rem;
+}
+.paret{
+    display: flex;
+    justify-content:center;
+}
+.deleticon{
+    cursor: pointer;
+}

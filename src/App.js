@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import New from "./Component/OneContact";
+import Contacts from "./Component/Contacts";
+import Contact from "./Component/Contact";
+import { Route, Routes, Link } from "react-router-dom";
+import ContactApp from "./Component/ContactApp";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Contact>
+        <Routes>
+          <Route path="/" element={<ContactApp />}></Route>
+          <Route path="/Add" element={<Contacts />}></Route>
+          <Route path="*" element={<ContactApp />}></Route>
+        </Routes>
+      </Contact>
+      {/* <Contact>
+        <Contacts />
+      </Contact> */}
     </div>
   );
 }
-
 export default App;
